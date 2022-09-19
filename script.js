@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection){
         return "Its a tie!"
     }
     else if (result  == "Player") {
-        return  'Goodjob! ${playerSelection} beats ${computerSelection}. You won'
+        return 'Goodjob! ${playerSelection} beats ${computerSelection}. You won'
     }
     else {
         return 'Oh no! ${computerSelection} beats ${playerSelection}. You lost'
