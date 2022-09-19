@@ -9,8 +9,14 @@ console.log(getComputerChoice(choices))
 
 // function for playing a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection){
-    
+
 }
 
-const playerSelection = prompt("Whats your move?")
+// the parameters for my playRound function
+const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice(choices);
+
+function getPlayerChoice() {
+    const input = prompt("Pick between Rock, Paper or Scissor");
+    input = input.toLowerCase();
+}
