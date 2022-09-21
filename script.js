@@ -58,10 +58,27 @@ function playRound(playerSelection, computerSelection){
 
 // function to play a 5 round game that keeps score and reports a winner or loser at the end
 function game(){
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i = 0; i < 5; i++){
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        if (checkWinner(playerSelection, computerSelection) == 'Player'){
+            playerScore++;
+        } 
+        else if (checkWinner(playerSelection, computerSelection) == 'Computer'){
+            computerScore++;
+        }
+    }
+    if (playerScore > computerScore) {
+        console.log('Player wins!');
+    }
+    else if (playerScore < computerScore) {
+        console.log('Computer wins!');
+    }
+    else {
+        console.log('Looks like we have a tie!')
     }
 }
 
