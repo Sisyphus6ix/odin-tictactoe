@@ -42,3 +42,9 @@ function playRound(playerSelection, computerSelection){
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+
+// function to play a 5 round game that keeps score and reports a winner or loser at the end
+function game(playRound)
+ for (let i = 0; i < 5; i++) {
+    
+}
