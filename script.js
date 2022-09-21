@@ -4,7 +4,6 @@ const choices =['rock', 'paper', 'scissors'];
 // function for the computer to randomly return either Rock, Paper, or Scissors
 function getComputerChoice() {
     const decision = choices[Math.floor(Math.random()*choices.length)];
-    console.log ("The Computer chose", decision)
     return decision
 }
 
