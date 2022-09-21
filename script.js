@@ -8,6 +8,22 @@ function getComputerChoice() {
     return decision
 }
 
+// function to get the players choice
+function getPlayerChoice(){
+    let input = false;
+    while (input === false) {
+        const playerChoice = prompt("Rock, Paper or Scissors");
+        if(playerChoice == null){
+            continue;
+        }
+        const playerChoiceInLower = playerChoice.toLowerCase();
+        if (playerChoice.includes(playerChoiceInLower)){
+            input = true;
+            return playerChoiceInLower;
+        }
+    }
+}
+
 // function for checking the winner
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection == computerSelection){
@@ -44,7 +60,7 @@ function playRound(playerSelection, computerSelection){
 // function to play a 5 round game that keeps score and reports a winner or loser at the end
 function game(){
     for (let i = 0; i < 5; i++){
-        const playerSelection = "rock";
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }
