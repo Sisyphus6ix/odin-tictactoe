@@ -83,4 +83,5 @@ function game(){
     }
 }
 
+// calling the game function again to actually run it
 game()
