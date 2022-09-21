@@ -4,6 +4,7 @@ const choices =['rock', 'paper', 'scissors'];
 // function for the computer to randomly return either Rock, Paper, or Scissors
 function getComputerChoice() {
     const decision = choices[Math.floor(Math.random()*choices.length)];
+    console.log ("The Computer chose", decision)
     return decision
 }
 
@@ -30,10 +31,10 @@ function playRound(playerSelection, computerSelection){
         return "Its a tie!"
     }
     else if (result  == "Player") {
-        return 'Goodjob! ${playerSelection} beats ${computerSelection}. You won'
+        return `Goodjob! ${playerSelection} beats ${computerSelection}. You won`
     }
     else {
-        return 'Oh no! ${computerSelection} beats ${playerSelection}. You lost'
+        return `Oh no! ${computerSelection} beats ${playerSelection}. You lost`
     }
 }  
 
